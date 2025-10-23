@@ -12,7 +12,7 @@ The `HDM` pipeline consists of 4 stages:
 
 
 ## Demo
-We provide a demo for demonstrating the inputs and execution process of HDM, use the [Demo Google Colab Notebook] 
+We provide a demo for demonstrating the inputs and execution process of HDM, use the [Demo Google Colab Notebook](https://colab.research.google.com/github/xyao7/HDOCK-Multimer/blob/main/HDM.ipynb). 
 
 This demo Colab Notebook runs the HDM pipeline on the `examples/7D3U/` folder in this repository. The output models will be saved in the newly created folder `examples/7D3U/results/`.
 
@@ -183,7 +183,7 @@ In this stage, we will perform all the modeling strategies selected in the previ
 Please confirm that you have prepared the `stoi.json` file (recording stoichiometry and subunit definitions) and two directories, `mono_dir/` and `subcomponent_dir/`, containing the monomer and subcomponent structures, respectively. With the inputs ready, you can run HDM either locally or via the Google Colab Notebook.
 
 ### Running HDM via Google Colab
-By using the Colab Notebook, please upload the input data for your target complex in your Google Drive first, then run the algorithm using the [Demo Google Colab Notebook]
+By using the Colab Notebook, please upload the input data for your target complex in your Google Drive first, then run the algorithm using the [Demo Google Colab Notebook](https://colab.research.google.com/github/xyao7/HDOCK-Multimer/blob/main/HDM.ipynb).
 
 ### Running HDM locally
 By running the script `HDM_pipeline.sh`:
