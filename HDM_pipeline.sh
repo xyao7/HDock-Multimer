@@ -7,10 +7,7 @@ set -e
 # ------------------------------------------------------------------------------
 # Parse arguments from command line
 NUM_CPUS=20
-<<<<<<< HEAD
 NUM_STEPS=0
-=======
->>>>>>> af68c8e3e373774427ca682a31edb6f375c5b95e
 NMAX=10
 
 while [[ $# -gt 0 ]]; do
@@ -30,12 +27,9 @@ while [[ $# -gt 0 ]]; do
         -ncpu|--ncpu)
             NUM_CPUS=$2
             shift 2;;
-<<<<<<< HEAD
         -steps|--steps)
             NUM_STEPS=$2
             shift 2;;
-=======
->>>>>>> af68c8e3e373774427ca682a31edb6f375c5b95e
         -h|--help)
             echo "Usage: $0 -stoi <stoi.json> -mono_dir <mono_dir/> -sub_dir <subcomponent_dir/> [-nmax N] [-ncpu N]"
             echo ""
@@ -47,10 +41,7 @@ while [[ $# -gt 0 ]]; do
             echo "Optional arguments:"
             echo "    -nmax     : Maximum number of output models (default: 10)"
             echo "    -ncpu     : Maximum number of CPUs used in parallel (default: 20)"
-<<<<<<< HEAD
             echo "    -steps    : The number of energy minimization steps during structural relaxation (default: 0)"
-=======
->>>>>>> af68c8e3e373774427ca682a31edb6f375c5b95e
             exit 0;;
         *)
             echo "[ERROR] Wrong command argument: $1"
@@ -64,11 +55,7 @@ done
 # Validate required arguments
 if [[ -z "$FILE_STOI" || -z "$MONO_DIR" || -z "$SUBCOMPONENT_DIR" ]]; then
     echo "[ERROR] Missing required arguments"
-<<<<<<< HEAD
     echo "Usage: $0 -stoi <stoi.json> -mono_dir <mono_dir/> -sub_dir <subcomponent_dir/> [-nmax N] [-ncpu N] [-steps N]"
-=======
-    echo "Usage: $0 -stoi <stoi.json> -mono_dir <mono_dir/> -sub_dir <subcomponent_dir/> [-nmax N] [-ncpu N]"
->>>>>>> af68c8e3e373774427ca682a31edb6f375c5b95e
     exit 1
 fi
 
@@ -84,6 +71,7 @@ START_TIME=$(date +%s)
 # ------------------------------------------------------------------------------
 # Determinate modeling strategies
 BASE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/" && pwd)"
+chmod +x ${BASE_DIR}/tools/transchain ${BASE_DIR}/tools/ppscore
 JQ=${BASE_DIR}/tools/jq
 WORK_DIR=$(dirname "$FILE_STOI")
 
@@ -115,14 +103,9 @@ else
     exit 1
 fi
 
-<<<<<<< HEAD
 if [[ ! -f "$WORK_DIR/build_types.txt" ]]; then
     python ${BASE_DIR}/scripts/check_build_type.py $FILE_STOI
 fi 
-=======
-python ${BASE_DIR}/scripts/check_build_type.py $FILE_STOI
-
->>>>>>> af68c8e3e373774427ca682a31edb6f375c5b95e
 if [[ ! -f "$WORK_DIR/build_types.txt" ]]; then
     echo "[ERROR] Determination of modeling strategies failed" >&2
     exit 1

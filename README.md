@@ -155,20 +155,12 @@ Here, `mono_dir` is the directory storing AF2-predicted monomer PDB files. **Not
 ## Stage 3 - Determining suitable modeling strategies
 In this stage, we will select appropriate modeling strategies based on the complex homology and pairwise docking results. 
 
-<<<<<<< HEAD
 **Available Modeling Strategies:** \
-=======
-**Available Modeling Strategies:**
->>>>>>> af68c8e3e373774427ca682a31edb6f375c5b95e
 1.**Strategy 1**: asymmetric docking (i.e., multi-body docking). \
 2.**Strategy 2**: symmetric docking (a combination of docking methods for different symmetry types, covering cyclic, dihedral, tetrahedral and octahedral symmetries). \
 3.**Strategy 3**: assembly.
 
-<<<<<<< HEAD
 **Strategy Application Rules:** \
-=======
-**Strategy Selection Rules:**
->>>>>>> af68c8e3e373774427ca682a31edb6f375c5b95e
 -**Homomeric complexes:** 1, 2 & 3. \
 -**Heteromeric complexes with <5 unique chains:** 1 & 3. \
 -**Heteromeric complexes with >=5 unique chains:** 3. 
@@ -187,7 +179,6 @@ The command will output a file `build_types.txt` recording all selected modeling
 
 ## Stage 4 - Modeling, scoring and ranking models
 In this stage, we will perform all the modeling strategies selected in the previous stage. 
-<<<<<<< HEAD
 
 Please confirm that you have prepared the `stoi.json` file (recording stoichiometry and subunit definitions) and two directories, `mono_dir/` and `subcomponent_dir/`, containing the monomer and subcomponent structures, respectively. With the inputs ready, you can run HDM either locally or via the Google Colab Notebook.
 
@@ -224,5 +215,3 @@ Jumper, J. et al. Highly accurate protein structure prediction with AlphaFold. N
 
 Evans, R. et al. Protein complex prediction with AlphaFold-Multimer. Preprint at bioRxiv
 https://doi.org/10.1101/2021.10.04.463034 (2021).
-=======
->>>>>>> af68c8e3e373774427ca682a31edb6f375c5b95e
