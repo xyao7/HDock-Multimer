@@ -6,14 +6,14 @@ if ! ldconfig -p | grep -q "libfftw3.so.3"; then
 fi
 
 # Install HDOCKlite
-wget -q http://huanglab.phys.hust.edu.cn/software/hdocklite/download/145978343768fa3d6897522/HDOCKlite.tar.gz
+wget -q http://huanglab.phys.hust.edu.cn/software/hdocklite/download/40812834668fcf339242f6/HDOCKlite.tar.gz
 tar -xzf HDOCKlite.tar.gz
 cp HDOCKlite-v1.1/createpl tools/
 cp HDOCKlite-v1.1/hdock tools/
 rm -rf HDOCKlite.tar.gz HDOCKlite-v1.1/
 
 # Install HSYMDOCKlite
-wget -q http://huanglab.phys.hust.edu.cn/software/hsymdock/download/154078528868fa3d63dc36a/HSYMDOCKlite.tar.gz
+wget -q http://huanglab.phys.hust.edu.cn/software/hsymdock/download/120057430668fcf33cece74/HSYMDOCKlite.tar.gz
 tar -xzf HSYMDOCKlite.tar.gz
 cp HSYMDOCK_v1.1/chdock tools/
 cp HSYMDOCK_v1.1/compcn tools/
